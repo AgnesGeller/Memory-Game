@@ -1,51 +1,51 @@
 const cardArray = [ 
     {
         name: "fries",
-        img: "img/fries.png",
+        img: "assets/img/fries.png",
     },
     {
         name: "cheeseburger",
-        img: "img/cheeseburger.png",
+        img: "assets/img/cheeseburger.png",
     },
     {
         name: "hotdog",
-        img: "img/hotdog.png",
+        img: "assets/img/hotdog.png",
     },
     {
         name: "ice-cream",
-        img: "img/ice-cream.png",
+        img: "assets/img/ice-cream.png",
     },
     {
         name: "milkshake",
-        img: "img/milkshake.png",
+        img: "assets/img/milkshake.png",
     },
     {
         name: "pizza",
-        img: "img/pizza.png",
+        img: "assets/img/pizza.png",
     },
     {
         name: "fries",
-        img: "img/fries.png",
+        img: "assets/img/fries.png",
     },
     {
         name: "cheeseburger",
-        img: "img/cheeseburger.png",
+        img: "assets/img/cheeseburger.png",
     },
     {
         name: "hotdog",
-        img: "img/hotdog.png",
+        img: "assets/img/hotdog.png",
     },
     {
         name: "ice-cream",
-        img: "img/ice-cream.png",
+        img: "assets/img/ice-cream.png",
     },
     {
         name: "milkshake",
-        img: "img/milkshake.png",
+        img: "assets/img/milkshake.png",
     },
     {
         name: "pizza",
-        img: "img/pizza.png",
+        img: "assets/img/pizza.png",
     }
     
 ]
@@ -61,7 +61,7 @@ cardArray.sort(() => 0.5 - Math.random())
  function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement("img")
-        card.setAttribute("src", "img/blank.png")
+        card.setAttribute("src", "./assets/img/blank.png")
         card.setAttribute("data-id", i)
         card.addEventListener("click", flipCard)
         gridDisplay.appendChild(card)
@@ -82,15 +82,15 @@ cardArray.sort(() => 0.5 - Math.random())
 
     if (cardsChosen[0] == cardsChosen[1]) {
         alert("You found a match!")
-        cards[optionOneIds].setAttribute("src", "img/white.png")
-        cards[optionTwoIds].setAttribute("src", "img/white.png")
+        cards[optionOneIds].setAttribute("src", "./assets/img/white.png")
+        cards[optionTwoIds].setAttribute("src", "./assets/img/white.png")
         cards[optionOneIds].removeEventListener("click", flipCard)
         cards[optionTwoIds].removeEventListener("click", flipCard)
         cardsWon.push(cardsChosen)
 
     } else {
-        cards[optionOneIds].setAttribute("src", "img/blank.png")
-        cards[optionTwoIds].setAttribute("src", "img/blank.png")
+        cards[optionOneIds].setAttribute("src", "./assets/img/blank.png")
+        cards[optionTwoIds].setAttribute("src", "./assets/img/blank.png")
         alert("Sorry try agan!")
     }
     resultDisplay.textContent = cardsWon.length
